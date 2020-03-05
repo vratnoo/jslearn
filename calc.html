@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <!-- choose one -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Jee blog</title>
+  <style type="text/css">
+    body{
+      background-color: #dff0f3;
+      color: #4a7f88;
+    }
+    
+    .main{
+      /*background-color: gray;*/
+      width:300px;
+      margin:5rem auto;
+      border: 2px solid black;
+    }
+    .display{
+        background-color: #e2e2e2;
+    color: #92979c;
+    font-size: 1.5rem;
+    height: 2rem;
+
+      
+    }
+    .btn{
+      border-radius: 0;
+
+    }
+
+  </style>
+
+  </head>
+<body>
+  <h1 class="text-center">CALCULATOR</h1>
+  <div class="main">
+
+    <div class="container">
+      <div class="row">
+        <div class="col p-0 display"><span id="display"></span></div>
+        
+      </div>
+       <div class="row">
+        <div class="col p-0"><button  class="btn btn-block btn-danger" id='clear'>C</button></div>
+        <div class="col p-0"><button id="2" class="in btn btn-block btn-dark">+/-</button></div>
+        <div class="col p-0"><button id="3" class="in btn btn-block btn-dark">MC</button></div>
+        <div class="col p-0"><button id="d" class="op btn btn-block btn-info">/</button></div>
+      </div>
+
+      <div class="row">
+        <div class="col p-0"><button id="1" class="in btn btn-block btn-dark">1</button></div>
+        <div class="col p-0"><button id="2" class="in btn btn-block btn-dark">2</button></div>
+        <div class="col p-0"><button id="3" class="in btn btn-block btn-dark">3</button></div>
+         <div class="col p-0"><button id="s" class="op btn btn-block btn-info">-</button></div>
+      </div>
+      <div class="row">
+        <div class="col p-0"><button id="4" class="in btn btn-block btn-dark">4</button></div>
+        <div class="col p-0"><button id="5" class="in btn btn-block btn-dark">5</button></div>
+        <div class="col p-0"><button id="6" class="in btn btn-block btn-dark">6</button></div>
+     <div class="col p-0"><button id="m" class="op btn btn-block btn-info">X</button></div>
+      </div>
+       <div class="row">
+        <div class="col p-0"><button id="7" class="in btn btn-block btn-dark">7</button></div>
+        <div class="col p-0"><button id="8" class="in btn  btn-block btn-dark">8</button></div>
+        <div class="col p-0"><button id="9" class="in btn btn-block btn-dark">9</button></div>
+        <div class="col p-0"><button id="a" class="op btn btn-block btn-info">+</button></div>
+      </div>
+      <div class="row">
+        <div class="col p-0"><button id="point" class="in btn btn-block btn-dark">.</button></div>
+        <div class="col p-0"><button id="0" class="in btn btn-block btn-dark">0</button></div>
+        <div class="col p-0"><button id="3" class="in btn btn-block btn-dark">3</button></div>
+        <div class="col p-0"><button id="eq" class="op btn btn-block btn-info">=</button></div>
+      </div>
+    </div>
+    
+  </div>
+
+ <script>
+    feather.replace()
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="calc.js"></script>	
+</body>
+</html>

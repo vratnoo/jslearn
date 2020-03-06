@@ -2,5 +2,5 @@
 basic js projects
 * To do list
 * calculator
-* to do list
+* Side bar menu
 

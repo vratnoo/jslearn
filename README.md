@@ -1,6 +1,6 @@
 # jslearn
 basic js projects
->> TO DO LIST
->> Calculator
->> sidebarmenu
+* To do list
+* calculator
+* to do list
 

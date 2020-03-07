@@ -9,15 +9,27 @@ function render() {
     td_arr.forEach(function(item, index) {
         var nelem = document.createElement("li");
         nelem.className = 'list-group-item';
+        var ifchecked = ""
         if (item.status === true) {
-            nelem.className+=" "+'checked';
-            var ifchecked = 'checked';
+            nelem.className += " " + 'checked';
+             ifchecked = 'checked';
         }
-        el = "<input class='del' type='button' id=" + index + " value='X'>";
-        el += "<span>" + item.value + "</span><input class='checks' id=" + index + " type='checkbox' " + ifchecked + " name='check'>";
-     
+
+
+        el = "<div class='container'>";
+        el += "<div class='row'>";
+        el += "<div class='col-1 p-0'>";
+        el += "<input class='checks' "+ ifchecked +" id=" + index + " type='checkbox'></div>";
+        el += "<div class='col'><span>" + item.value + "</span></div>";
+        el += "<div class='col-1'><button type='button' id=" + index + "  class='del btn  btn-outline-secondary btn-sm p-0 ml-auto'>";
+        el += "<i data-feather='x' class='io'></i></button></div></div></div>";
+
+        // el = '<input class='del' type='button' id=" + index + " value='X'>";
+        // el += "<span>" + item.value + "</span><input class='checks' id=" + index + " type='checkbox' " + ifchecked + " name='check'>";
+         console.log(el);   
         nelem.innerHTML = el;
         target.appendChild(nelem);
+         feather.replace()
     });
 
     var checks = document.querySelectorAll(".checks");
@@ -42,11 +54,14 @@ function render() {
 document.onload = render();
 var add = document.querySelector("#add");
 add.onclick = function() {
+
     additem()
+
 };
 
 function additem() {
     var getdata = document.querySelector("#sdata").value;
+    if(getdata!==""){
     td_arr.push({
         value: getdata,
         status: false
@@ -54,6 +69,9 @@ function additem() {
 
 
     render();
+    //empty input
+    document.querySelector("#sdata").value="";
+}
 
 }
 
@@ -71,13 +89,17 @@ function deleteit(item) {
 function checkit(item) {
     var id = item.id;
     console.log(item.checked);
+    celem = item.closest("li");
     if (item.checked === true) {
         td_arr[id].status = true;
-        item.parentNode.className+=" "+'checked';
+        
+
+        celem.className += " " + 'checked';
+        console.log(celem)
 
     } else {
         td_arr[id].status = false;
-        item.parentNode.className= 'list-group-item';
+        celem.className = 'list-group-item';
     }
 
     console.log(td_arr[id]);

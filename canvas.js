@@ -35,7 +35,7 @@ ctx.clearRect(0, 0, 800, 800);
 	ctx.beginPath();
 	ctx.moveTo(x, y);
   	ctx.lineTo(x+Math.cos(rots-rest)*90, y+Math.sin(rots-rest)*90);
-  	ctx.lineWidth = 2;
+  	ctx.lineWidth = 5;
 	ctx.stroke();
 
 	ctx.beginPath();
@@ -70,9 +70,9 @@ c.onmousemove = function(e){
 
 }
 
-function myTimers(){
+function myTimers(s){
 
-	rots+=6*Math.PI/180;
+	rots+=s*Math.PI/180;
 	if(rots>360){
 		rots= 0;
 	}
@@ -98,8 +98,18 @@ function myTimerh(){
 
 
 }
+s=1;
+while(s>=1){
+rots+=rots*Math.PI/180;
+	if(rots>360){
+		rots = 1;
+		s= 1;
+	}
+	draw();
+	s+=5;
 
-setInterval(myTimers, 1000);
+}
+setInterval(myTimers,1);
 
 setInterval(myTimerm, 60000);
 
